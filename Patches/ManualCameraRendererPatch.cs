@@ -23,7 +23,9 @@ namespace LethalCompanyMinimap.Patches
             ref Camera ___mapCamera, ref PlayerControllerB ___targetedPlayer, //ref Light ___mapCameraLight,
             ref Transform ___shipArrowPointer, GameObject ___shipArrowUI, GameObject ___shipIcon,
             List<TransformAndName> ___radarTargets, int ___targetTransformIndex,
-            ref Image ___compassRose, ref bool ___enableHeadMountedCam)
+            ref Image ___compassRose, ref bool ___enableHeadMountedCam,
+            Camera ___cam, bool ___overrideCameraForOtherUse, Transform ___headMountedCamTarget,
+            ref GameObject ___contourMap, ref bool ___checkedForContourMap)
         {
             if (___mapCamera != null)
             {
@@ -101,6 +103,32 @@ namespace LethalCompanyMinimap.Patches
                 if (___shipIcon != null)
                 {
                     ___shipIcon.SetActive(showArrow);
+                }
+            }
+
+            // Since update v80, the game only updates the terrain contour map while the local player is in the ship
+            // looking at the monitor, so keep it following the radar target on the Minimap (same logic as the game)
+            if (___mapCamera != null && ___cam == ___mapCamera && !___overrideCameraForOtherUse
+                && !StartOfRound.Instance.inShipPhase && ___headMountedCamTarget != null)
+            {
+                if (!___checkedForContourMap && ___contourMap == null)
+                {
+                    ___contourMap = GameObject.FindGameObjectWithTag("TerrainContourMap");
+                    ___checkedForContourMap = true;
+                }
+                if (___contourMap != null)
+                {
+                    bool showContourMap = (___targetedPlayer != null && !___targetedPlayer.isInsideFactory)
+                        || (___targetedPlayer == null && ___headMountedCamTarget.position.y > -80f);
+                    if (showContourMap != ___contourMap.activeSelf)
+                    {
+                        ___contourMap.SetActive(showContourMap);
+                    }
+                    if (showContourMap)
+                    {
+                        Vector3 contourPos = ___contourMap.transform.position;
+                        ___contourMap.transform.position = new Vector3(contourPos.x, ___headMountedCamTarget.position.y - 1.5f, contourPos.z);
+                    }
                 }
             }
 

@@ -87,6 +87,7 @@ namespace LethalCompanyMinimap
             harmony.PatchAll(typeof(TimeOfDayPatch));
             harmony.PatchAll(typeof(DeadBodyInfoPatch));
             harmony.PatchAll(typeof(TurretPatch));
+            harmony.PatchAll(typeof(StartOfRoundPatch));
 
             // Initialize Minimap Mod Menu GUI
             GameObject minimapGUIObject = new GameObject("MinimapGUI");
