@@ -40,8 +40,9 @@ doesn't change even if your teammate switches to a different player in the ship.
 It also allows you to switch the focused player on your Minimap without 
 affecting the Minimap or ship map of other players.
 
-This is a client-sided mod, meaning that other players don't need to have this 
-mod installed.
+**Every player in the lobby (host and clients) must have this mod installed.** 
+Players without the mod cannot join a lobby that uses it, and players with the 
+mod cannot join a lobby without it.
 
 
 # Features
@@ -104,6 +105,9 @@ install it. BepInEx will be installed automatically as a dependency.
 
 
 # Changelog (Fork)
+
+### v1.2.0
+- **All players in the lobby (host and clients) must now have this mod installed.** Players without it cannot join a lobby that uses it, and vice versa. This is required by the Thunderstore Lethal Company community rules for mods that give an advantage
 
 ### v1.1.1
 - Fix the terrain contour map disappearing on the Minimap when outdoors
