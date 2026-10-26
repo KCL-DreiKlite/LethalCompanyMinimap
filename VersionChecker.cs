@@ -3,6 +3,9 @@
 // Licensed under the GNU Affero General Public License, Version 3
 // ----------------------------------------------------------------------
 
+// Only compiled into GitHub release builds (ReleaseGitHub configuration), since Thunderstore
+// doesn't allow mods to contact remote servers and mod managers keep those installs up to date
+#if VERSION_CHECK
 using System.Net.Http;
 using System.Threading.Tasks;
 using System;
@@ -101,3 +104,4 @@ namespace LethalCompanyMinimap
         }
     }
 }
+#endif

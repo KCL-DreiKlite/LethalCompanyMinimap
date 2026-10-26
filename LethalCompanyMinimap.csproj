@@ -30,6 +30,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <!-- GitHub release build: same as Release, plus the in-game update check (not allowed on Thunderstore) -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseGitHub|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\ReleaseGitHub\</OutputPath>
+    <DefineConstants>TRACE;VERSION_CHECK</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
       <HintPath>G:\Steam\steamapps\common\Lethal Company\BepInEx\core\0Harmony.dll</HintPath>

@@ -71,8 +71,11 @@ namespace LethalCompanyMinimap
             mls = BepInEx.Logging.Logger.CreateLogSource(modGUID);
             mls.LogInfo($"{modName} {modVersion} loaded!");
 
-            // Start the Task of getting the latest version
+#if VERSION_CHECK
+            // Start the Task of getting the latest version (GitHub release builds only,
+            // since mod managers keep Thunderstore installs up to date)
             _ = VersionChecker.GetLatestVersionAsync();
+#endif
 
             // Patching stuff
             harmony.PatchAll(typeof(ManualCameraRendererPatch));

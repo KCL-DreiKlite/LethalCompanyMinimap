@@ -26,6 +26,7 @@ namespace LethalCompanyMinimap.Patches
         [HarmonyPostfix]
         static void DisplayMinimapPatch()
         {
+#if VERSION_CHECK
             // Check for updates
             string message = null;
             if (VersionChecker.latestVersion == null)
@@ -40,6 +41,7 @@ namespace LethalCompanyMinimap.Patches
             {
                 HUDManagerPatch.SendClientMessage(message);
             }
+#endif
 
             // Get the Minimap size from the settings
             int size = MinimapMod.minimapGUI.minimapSize;
