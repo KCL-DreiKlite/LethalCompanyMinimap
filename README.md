@@ -1,7 +1,7 @@
-# Lethal Company Minimap (v80 Fork)
+# Lethal Company Minimap (v80+ Fork)
 
 > **This is a community-maintained fork of [Tyzeron's Minimap mod](https://github.com/tyzeron/LethalCompanyMinimap)**, 
-> updated to work with **Lethal Company v80**. All credit for the original mod 
+> updated to work with **Lethal Company v80+**. All credit for the original mod 
 > goes to [Tyzeron](https://github.com/tyzeron). This fork is not affiliated 
 > with or endorsed by the original author.
 >
@@ -103,13 +103,13 @@ install it. BepInEx will be installed automatically as a dependency.
 6. Launch the **Lethal Company** game and enjoy your new Minimap mod :)
 
 
-# Changelog
+# Changelog (Fork)
 
-### v1.1.1 (Fork)
+### v1.1.1
 - Fix the terrain contour map disappearing on the Minimap when outdoors
 - Fix the Minimap showing only the moon info screen on non-host clients after a player joins mid-round (e.g. with late-join mods)
 
-### v1.1.0 (Fork)
+### v1.1.0
 - Compatibility with the game update v80
 - The ship icon introduced in the newer game updates is now toggled together with the Ship Arrow
 - The Ship Arrow now also follows radar boosters, not only players
@@ -129,7 +129,7 @@ Please report issues with this fork on the
 
 - Original mod by [Tyzeron](https://github.com/tyzeron) — 
 [tyzeron/LethalCompanyMinimap](https://github.com/tyzeron/LethalCompanyMinimap)
-- v80 compatibility fork maintained by ZweitenKlite
+- v80+ compatibility fork maintained by ZweitenKlite
 
 Licensed under the [GNU Affero General Public License v3.0](https://github.com/KCL-DreiKlite/LethalCompanyMinimap/blob/main/LICENSE), 
 the same license as the original mod. The full source code of this fork is 
