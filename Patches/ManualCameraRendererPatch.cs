@@ -6,6 +6,7 @@
 using GameNetcodeStuff;
 using HarmonyLib;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,7 +21,8 @@ namespace LethalCompanyMinimap.Patches
         [HarmonyPostfix]
         static void MapCameraAlwaysEnabledPatch(
             ref Camera ___mapCamera, ref PlayerControllerB ___targetedPlayer, //ref Light ___mapCameraLight,
-            ref Transform ___shipArrowPointer, GameObject ___shipArrowUI,
+            ref Transform ___shipArrowPointer, GameObject ___shipArrowUI, GameObject ___shipIcon,
+            List<TransformAndName> ___radarTargets, int ___targetTransformIndex,
             ref Image ___compassRose, ref bool ___enableHeadMountedCam)
         {
             if (___mapCamera != null)
@@ -81,23 +83,24 @@ namespace LethalCompanyMinimap.Patches
             }
             */
 
-            if (___shipArrowPointer != null && ___shipArrowUI != null && ___targetedPlayer != null)
+            if (___shipArrowPointer != null && ___shipArrowUI != null && ___targetTransformIndex < ___radarTargets.Count)
             {
                 // Handle and toggle the arrow pointing to the ship based on the user's mod settings
-                if (MinimapMod.minimapGUI.showShipArrow && !___targetedPlayer.isInsideFactory
-                    && Vector3.Distance(___targetedPlayer.transform.position, StartOfRound.Instance.elevatorTransform.transform.position) > 16f)
+                // Since update v80, the radar target (player or radar booster) is used instead of the targeted player
+                Transform radarTarget = ___radarTargets[___targetTransformIndex]?.transform;
+                bool showArrow = MinimapMod.minimapGUI.showShipArrow && radarTarget != null && radarTarget.position.y >= -80f
+                    && Vector3.Distance(radarTarget.position, StartOfRound.Instance.elevatorTransform.transform.position) > 16f;
+                if (showArrow)
                 {
-                    if (StartOfRound.Instance != null)
-                    {
-                        ___shipArrowPointer.LookAt(StartOfRound.Instance.elevatorTransform);
-                    }
+                    ___shipArrowPointer.LookAt(StartOfRound.Instance.elevatorTransform);
                     int arrowOffset = MinimapMod.minimapGUI.autoRotate ? 45 : 0;
                     ___shipArrowPointer.eulerAngles = new Vector3(0f, ___shipArrowPointer.eulerAngles.y + arrowOffset, 0f);
-                    ___shipArrowUI.SetActive(value: true);
                 }
-                else
+                ___shipArrowUI.SetActive(showArrow);
+                // Since update v80, a ship icon is displayed together with the ship arrow
+                if (___shipIcon != null)
                 {
-                    ___shipArrowUI.SetActive(value: false);
+                    ___shipIcon.SetActive(showArrow);
                 }
             }
 
