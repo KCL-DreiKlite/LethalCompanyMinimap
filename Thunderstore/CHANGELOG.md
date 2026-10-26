@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.1
+
+- Fix the terrain contour map disappearing on the Minimap when outdoors
+- Fix the Minimap showing only the moon info screen on non-host clients after a player joins mid-round (e.g. with late-join mods)
+
 ## 1.1.0
 
 First release of the v80-compatible fork of [Tyzeron's Minimap mod](https://github.com/tyzeron/LethalCompanyMinimap).

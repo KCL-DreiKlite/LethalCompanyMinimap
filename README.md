@@ -105,6 +105,10 @@ install it. BepInEx will be installed automatically as a dependency.
 
 # Changelog
 
+### v1.1.1 (Fork)
+- Fix the terrain contour map disappearing on the Minimap when outdoors
+- Fix the Minimap showing only the moon info screen on non-host clients after a player joins mid-round (e.g. with late-join mods)
+
 ### v1.1.0 (Fork)
 - Compatibility with the game update v80
 - The ship icon introduced in the newer game updates is now toggled together with the Ship Arrow
