@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.1
+
+- The Thunderstore release no longer checks for updates in-game (mod managers keep it up to date). The DLL on [GitHub Releases](https://github.com/KCL-DreiKlite/LethalCompanyMinimap/releases) still does
+
 ## 1.2.0
 
 - **All players in the lobby (host and clients) must now have this mod installed.** Players without it cannot join a lobby that uses it, and vice versa. This is required by the Thunderstore Lethal Company community rules for mods that give an advantage

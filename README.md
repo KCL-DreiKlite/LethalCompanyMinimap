@@ -97,14 +97,18 @@ install it. BepInEx will be installed automatically as a dependency.
     - The `BepInEx` and `plugins` folder should have been generated in the previous step
     - **Example:** `C:\Program Files\Steam\steamapps\common\Lethal Company\BepInEx\plugins`
 
-4. Download this mod from [Thunderstore](https://thunderstore.io/c/lethal-company/p/ZweitenKlite/Minimap/)
+4. Download this mod from [Thunderstore](https://thunderstore.io/c/lethal-company/p/ZweitenKlite/Minimap/) 
+or [GitHub Releases](https://github.com/KCL-DreiKlite/LethalCompanyMinimap/releases)
 
-5. Copy the **`LethalCompanyMinimap.dll`** file from the downloaded zip to the `plugins` folder
+5. Copy the downloaded **DLL file** (from the Thunderstore zip, or the one attached to the GitHub release) to the `plugins` folder
 
 6. Launch the **Lethal Company** game and enjoy your new Minimap mod :)
 
 
 # Changelog (Fork)
+
+### v1.2.1
+- The Thunderstore release no longer checks for updates in-game (mod managers keep it up to date). The DLL on [GitHub Releases](https://github.com/KCL-DreiKlite/LethalCompanyMinimap/releases) still does
 
 ### v1.2.0
 - **All players in the lobby (host and clients) must now have this mod installed.** Players without it cannot join a lobby that uses it, and vice versa. This is required by the Thunderstore Lethal Company community rules for mods that give an advantage

@@ -18,7 +18,7 @@ namespace LethalCompanyMinimap
     {
         public const string modGUID = "LethalCompanyMinimap";
         public const string modName = "Minimap";
-        public const string modVersion = "1.2.0";
+        public const string modVersion = "1.2.1";
         public const string modAuthor = "Tyzeron & ZweitenKlite";
         public const string modRepository = "KCL-DreiKlite/LethalCompanyMinimap";
         public const string modThunderstorePackage = "ZweitenKlite/Minimap";
