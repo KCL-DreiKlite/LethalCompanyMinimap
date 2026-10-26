@@ -18,9 +18,10 @@ namespace LethalCompanyMinimap
     {
         public const string modGUID = "LethalCompanyMinimap";
         public const string modName = "Minimap";
-        public const string modVersion = "1.0.6";
-        public const string modAuthor = "Tyzeron";
-        public const string modRepository = "tyzeron/LethalCompanyMinimap";
+        public const string modVersion = "1.1.0";
+        public const string modAuthor = "Tyzeron & ZweitenKlite";
+        public const string modRepository = "KCL-DreiKlite/LethalCompanyMinimap";
+        public const string modThunderstorePackage = "ZweitenKlite/Minimap";
 
         public static MouseAndKeyboard defaultGuiKey = MouseAndKeyboard.F1;
         public static MouseAndKeyboard defaultToggleMinimapKey = MouseAndKeyboard.F2;

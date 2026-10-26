@@ -14,7 +14,7 @@ namespace LethalCompanyMinimap
     {
         public static string latestVersion = null;
 
-        private static async Task<bool> GetVersionFromUrlAsync(string url)
+        private static async Task<bool> GetVersionFromUrlAsync(string url, string versionKey)
         {
             using (var client = new HttpClient())
             {
@@ -22,8 +22,8 @@ namespace LethalCompanyMinimap
                 try
                 {
                     string response = await client.GetStringAsync(url);
-                    latestVersion = ParseTagNameFromJson(response);
-                    return true;
+                    latestVersion = ParseStringFieldFromJson(response, versionKey);
+                    return latestVersion != null;
                 }
                 catch (Exception e)
                 {
@@ -35,22 +35,24 @@ namespace LethalCompanyMinimap
 
         public static async Task GetLatestVersionAsync()
         {
-            string mainUrl = "http://lethalminimap.tyzeron.com";
+            string mainUrl = $"https://thunderstore.io/api/experimental/package/{MinimapMod.modThunderstorePackage}/";
             string fallbackUrl = $"https://api.github.com/repos/{MinimapMod.modRepository}/releases/latest";
-            if (!await GetVersionFromUrlAsync(mainUrl))
+            if (!await GetVersionFromUrlAsync(mainUrl, "version_number"))
             {
-                await GetVersionFromUrlAsync(fallbackUrl);
+                await GetVersionFromUrlAsync(fallbackUrl, "tag_name");
             }
         }
 
-        private static string ParseTagNameFromJson(string jsonString)
+        private static string ParseStringFieldFromJson(string jsonString, string key)
         {
-            string tagNameToken = "\"tag_name\":\"";
-            int index = jsonString.IndexOf(tagNameToken);
+            // Tolerate whitespace around the colon, since GitHub returns pretty-printed JSON
+            string keyToken = $"\"{key}\"";
+            int index = jsonString.IndexOf(keyToken);
             if (index != -1)
             {
-                int startIndex = index + tagNameToken.Length;
-                int endIndex = jsonString.IndexOf("\"", startIndex);
+                int colonIndex = jsonString.IndexOf(':', index + keyToken.Length);
+                int startIndex = colonIndex == -1 ? -1 : jsonString.IndexOf('"', colonIndex) + 1;
+                int endIndex = startIndex <= 0 ? -1 : jsonString.IndexOf('"', startIndex);
                 if (endIndex != -1)
                 {
                     string versionNumber = jsonString.Substring(startIndex, endIndex - startIndex);
