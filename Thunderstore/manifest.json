@@ -1,0 +1,9 @@
+{
+  "name": "Minimap",
+  "version_number": "1.1.0",
+  "website_url": "https://github.com/KCL-DreiKlite/LethalCompanyMinimap",
+  "description": "A persistent, customizable minimap. v80-compatible fork of Tyzeron's Minimap mod (github.com/tyzeron/LethalCompanyMinimap).",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2305"
+  ]
+}

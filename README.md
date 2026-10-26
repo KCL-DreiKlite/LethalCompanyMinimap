@@ -1,4 +1,13 @@
-# Lethal Company Minimap
+# Lethal Company Minimap (v80 Fork)
+
+> **This is a community-maintained fork of [Tyzeron's Minimap mod](https://github.com/tyzeron/LethalCompanyMinimap)**, 
+> updated to work with **Lethal Company v80**. All credit for the original mod 
+> goes to [Tyzeron](https://github.com/tyzeron). This fork is not affiliated 
+> with or endorsed by the original author.
+>
+> - Original source code: https://github.com/tyzeron/LethalCompanyMinimap
+> - Original Thunderstore page: https://thunderstore.io/c/lethal-company/p/Tyzeron/Minimap/
+> - This fork's source code: https://github.com/KCL-DreiKlite/LethalCompanyMinimap
 
 Introducing a **Minimap mod** for Lethal Company, a dynamic solution designed 
 to enhance your gaming experience. This mod seamlessly integrates a persistent 
@@ -11,9 +20,6 @@ typically be provided by a partner stationed at the ship's terminal.
 In co-op mode, the Minimap mod ensures that everyone can join in the excitement 
 of venturing into the building, eliminating the need for one player to stay 
 back at the ship.
-
-<img alt="Minimap Mod Logo" src="Images/minimap-logo-1.png" width="272" 
-style="display: block; margin-left: auto; margin-right: auto;" />
 
 
 # Usage
@@ -36,8 +42,6 @@ affecting the Minimap or ship map of other players.
 
 This is a client-sided mod, meaning that other players don't need to have this 
 mod installed.
-
-<!-- ![Screenshot showcasing the Minimap](Images/minimap-showcase.png) -->
 
 
 # Features
@@ -68,45 +72,61 @@ mod installed.
 Radar Boosters, Ship Arrow, Compass, and the Head Camera
 - Informs if the mod is outdated and a newer version is available
 
-![Minimap GUI](Images/minimap-gui.png)
+![Minimap GUI](https://raw.githubusercontent.com/KCL-DreiKlite/LethalCompanyMinimap/main/Images/minimap-gui.png)
 
 
 # Installation
+
+### Using a mod manager (recommended)
+
+Search for **Minimap** by **ZweitenKlite** in [Gale](https://github.com/Kesomannen/gale) 
+or [r2modman](https://thunderstore.io/c/lethal-company/p/ebkr/r2modman/) and 
+install it. BepInEx will be installed automatically as a dependency.
+
+> **Do not install this fork together with Tyzeron's original Minimap mod.** 
+> Both use the same plugin ID, so BepInEx will only load one of them.
+
+### Manual installation
 
 1. Install **BepInEx** (see [BepInEx Installation Guide](https://docs.bepinex.dev/articles/user_guide/installation/index.html))
 
 2. Launch **Lethal Company** _once_ with **BepInEx** installed to generate necessary mod folders and files
 
-3. Navigate to your **Lethal Comanpy** game directory and go to `./BepInEx/plugins`
+3. Navigate to your **Lethal Company** game directory and go to `./BepInEx/plugins`
     - The `BepInEx` and `plugins` folder should have been generated in the previous step
     - **Example:** `C:\Program Files\Steam\steamapps\common\Lethal Company\BepInEx\plugins`
 
-4. Download the Minimap mod from the [Nexus Mods](https://www.nexusmods.com/lethalcompany/mods/18) or the [Thunderstore](https://thunderstore.io/c/lethal-company/p/Tyzeron/Minimap/)
+4. Download this mod from [Thunderstore](https://thunderstore.io/c/lethal-company/p/ZweitenKlite/Minimap/)
 
-5. Copy the downloaded **DLL file** (ex. `Minimap-v1.x.x.dll`) to the `plugins` folder
+5. Copy the **`LethalCompanyMinimap.dll`** file from the downloaded zip to the `plugins` folder
 
-6. Launch the **Lethal Comanpy** game and enjoy your new Minimap mod :)
-
-
-# Dev Notes
-
-This Minimap mod was a **weekend project**, so the code might be a little messy 
-due to the rapid development focus. In line with Donald Knuth's philosophy that 
-`early optimization is the root of all evil`, the initial aim was functionality 
-rather than optimization.
-
-Your feedback for improving and optimizing the code is warmly welcomed.
+6. Launch the **Lethal Company** game and enjoy your new Minimap mod :)
 
 
-# Contact
+# Changelog
 
-I am primarily active on Discord, but my **DMs are closed**. The most effective 
-way to get in touch with me is via a Discord Server **support ticket**.
+### v1.1.0 (Fork)
+- Compatibility with the game update v80
+- The ship icon introduced in the newer game updates is now toggled together with the Ship Arrow
+- The Ship Arrow now also follows radar boosters, not only players
+- Version check now uses this fork's Thunderstore page (falls back to GitHub releases)
 
-To find the most up-to-date invite link to the Discord server, please visit my 
-**Twitter/X** profile: [@Tyzeron](https://x.com/tyzeron).
+For changes up to v1.0.6, see the [original repository](https://github.com/tyzeron/LethalCompanyMinimap).
 
-I serve as a `System Administrator` on the Discord server and am highly active 
-there. I have decided to take this approach as it allows me to keep my focus on 
-mod development, without the added responsibility of owning and maintaining my 
-own Discord server.
+
+# Reporting Issues
+
+Please report issues with this fork on the 
+[fork's GitHub issue tracker](https://github.com/KCL-DreiKlite/LethalCompanyMinimap/issues), 
+**not** to the original author.
+
+
+# Credits & License
+
+- Original mod by [Tyzeron](https://github.com/tyzeron) — 
+[tyzeron/LethalCompanyMinimap](https://github.com/tyzeron/LethalCompanyMinimap)
+- v80 compatibility fork maintained by ZweitenKlite
+
+Licensed under the [GNU Affero General Public License v3.0](https://github.com/KCL-DreiKlite/LethalCompanyMinimap/blob/main/LICENSE), 
+the same license as the original mod. The full source code of this fork is 
+available at https://github.com/KCL-DreiKlite/LethalCompanyMinimap.
