@@ -97,6 +97,7 @@
     <Compile Include="Models.cs" />
     <Compile Include="Patches\TurretPatch.cs" />
     <Compile Include="Patches\StartOfRoundPatch.cs" />
+    <Compile Include="Patches\NetworkManagerPatch.cs" />
     <Compile Include="Patches\HUDManagerPatch.cs" />
     <Compile Include="Patches\DeadBodyInfoPatch.cs" />
     <Compile Include="Patches\TimeOfDayPatch.cs" />
