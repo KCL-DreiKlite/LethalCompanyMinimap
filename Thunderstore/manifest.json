@@ -1,7 +1,7 @@
 {
   "name": "Minimap",
-  "version_number": "1.2.1",
-  "website_url": "https://github.com/KCL-DreiKlite/LethalCompanyMinimap",
+  "version_number": "1.2.2",
+  "website_url": "https://github.com/LCZweitenKlite/LethalCompanyMinimap",
   "description": "A persistent, customizable minimap. All players must install it. v80+ fork of Tyzeron's Minimap mod (github.com/tyzeron/LethalCompanyMinimap).",
   "dependencies": [
     "BepInEx-BepInExPack-5.4.2305"

@@ -1,8 +1,12 @@
 # Changelog
 
+## 1.2.2
+
+- This repository has moved to a separate GitHub organization dedicated to Lethal Company modding. All links have been updated accordingly
+
 ## 1.2.1
 
-- The Thunderstore release no longer checks for updates in-game (mod managers keep it up to date). The DLL on [GitHub Releases](https://github.com/KCL-DreiKlite/LethalCompanyMinimap/releases) still does
+- The Thunderstore release no longer checks for updates in-game (mod managers keep it up to date). The DLL on [GitHub Releases](https://github.com/LCZweitenKlite/LethalCompanyMinimap/releases) still does
 
 ## 1.2.0
 

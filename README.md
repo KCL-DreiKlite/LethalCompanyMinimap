@@ -1,13 +1,19 @@
 # Lethal Company Minimap (v80+ Fork)
 
 > **This is a community-maintained fork of [Tyzeron's Minimap mod](https://github.com/tyzeron/LethalCompanyMinimap)**, 
-> updated to work with **Lethal Company v80+**. All credit for the original mod 
-> goes to [Tyzeron](https://github.com/tyzeron). This fork is not affiliated 
-> with or endorsed by the original author.
+> updated to work with **Lethal Company v80+**.
+>
+> I forked it because this is by far the best minimap mod I've ever used, but 
+> the original is no longer listed on Thunderstore. With the help of LLM (which 
+> is also the reason for the "AI Generated" tag) I was finally able to upload 
+> this masterpiece to Thunderstore. I hope you guys like it too!
+>
+> All credit for the original mod goes to [Tyzeron](https://github.com/tyzeron). 
+> This fork is not affiliated with or endorsed by the original author.
 >
 > - Original source code: https://github.com/tyzeron/LethalCompanyMinimap
 > - Original Thunderstore page: https://thunderstore.io/c/lethal-company/p/Tyzeron/Minimap/
-> - This fork's source code: https://github.com/KCL-DreiKlite/LethalCompanyMinimap
+> - This fork's source code: https://github.com/LCZweitenKlite/LethalCompanyMinimap
 
 Introducing a **Minimap mod** for Lethal Company, a dynamic solution designed 
 to enhance your gaming experience. This mod seamlessly integrates a persistent 
@@ -21,10 +27,10 @@ In co-op mode, the Minimap mod ensures that everyone can join in the excitement
 of venturing into the building, eliminating the need for one player to stay 
 back at the ship.
 
-
-# Usage
+## Usage
 
 These are the **default hotkeys**:
+
 - `F1` - open the Minimap Mod menu
 - `F2` - toggle the Minimap visibility
 - `F3` - override the ship controls
@@ -45,7 +51,7 @@ Players without the mod cannot join a lobby that uses it, and players with the
 mod cannot join a lobby without it.
 
 
-# Features
+## Features
 
 - Minimap that can be toggled on and off
     - You can toggle the Minimap via a configurable hotkey
@@ -70,13 +76,13 @@ mod cannot join a lobby without it.
 - All configurable settings saved across sessions
 - Toggle visibility of different Minimap icons
     - Loots, Enemies, Turrets, Alived Players, Dead Players, Terminal Codes, 
-Radar Boosters, Ship Arrow, Compass, and the Head Camera
+      Radar Boosters, Ship Arrow, Compass, and the Head Camera
 - Informs if the mod is outdated and a newer version is available
 
-![Minimap GUI](https://raw.githubusercontent.com/KCL-DreiKlite/LethalCompanyMinimap/main/Images/minimap-gui.png)
+![Minimap GUI](https://raw.githubusercontent.com/LCZweitenKlite/LethalCompanyMinimap/main/Images/minimap-gui.png)
 
 
-# Installation
+## Installation
 
 ### Using a mod manager (recommended)
 
@@ -98,17 +104,20 @@ install it. BepInEx will be installed automatically as a dependency.
     - **Example:** `C:\Program Files\Steam\steamapps\common\Lethal Company\BepInEx\plugins`
 
 4. Download this mod from [Thunderstore](https://thunderstore.io/c/lethal-company/p/ZweitenKlite/Minimap/) 
-or [GitHub Releases](https://github.com/KCL-DreiKlite/LethalCompanyMinimap/releases)
+   or [GitHub Releases](https://github.com/LCZweitenKlite/LethalCompanyMinimap/releases)
 
 5. Copy the downloaded **DLL file** (from the Thunderstore zip, or the one attached to the GitHub release) to the `plugins` folder
 
 6. Launch the **Lethal Company** game and enjoy your new Minimap mod :)
 
 
-# Changelog (Fork)
+## Changelog (Fork)
+
+### v1.2.2
+- This repository has moved to a separate GitHub organization dedicated to Lethal Company modding. All links have been updated accordingly
 
 ### v1.2.1
-- The Thunderstore release no longer checks for updates in-game (mod managers keep it up to date). The DLL on [GitHub Releases](https://github.com/KCL-DreiKlite/LethalCompanyMinimap/releases) still does
+- The Thunderstore release no longer checks for updates in-game (mod managers keep it up to date). The DLL on [GitHub Releases](https://github.com/LCZweitenKlite/LethalCompanyMinimap/releases) still does
 
 ### v1.2.0
 - **All players in the lobby (host and clients) must now have this mod installed.** Players without it cannot join a lobby that uses it, and vice versa. This is required by the Thunderstore Lethal Company community rules for mods that give an advantage
@@ -126,19 +135,19 @@ or [GitHub Releases](https://github.com/KCL-DreiKlite/LethalCompanyMinimap/relea
 For changes up to v1.0.6, see the [original repository](https://github.com/tyzeron/LethalCompanyMinimap).
 
 
-# Reporting Issues
+## Reporting Issues
 
 Please report issues with this fork on the 
-[fork's GitHub issue tracker](https://github.com/KCL-DreiKlite/LethalCompanyMinimap/issues), 
+[fork's GitHub issue tracker](https://github.com/LCZweitenKlite/LethalCompanyMinimap/issues), 
 **not** to the original author.
 
 
-# Credits & License
+## Credits & License
 
 - Original mod by [Tyzeron](https://github.com/tyzeron) — 
-[tyzeron/LethalCompanyMinimap](https://github.com/tyzeron/LethalCompanyMinimap)
+  [tyzeron/LethalCompanyMinimap](https://github.com/tyzeron/LethalCompanyMinimap)
 - v80+ compatibility fork maintained by ZweitenKlite
 
-Licensed under the [GNU Affero General Public License v3.0](https://github.com/KCL-DreiKlite/LethalCompanyMinimap/blob/main/LICENSE), 
+Licensed under the [GNU Affero General Public License v3.0](https://github.com/LCZweitenKlite/LethalCompanyMinimap/blob/main/LICENSE), 
 the same license as the original mod. The full source code of this fork is 
-available at https://github.com/KCL-DreiKlite/LethalCompanyMinimap.
+available at https://github.com/LCZweitenKlite/LethalCompanyMinimap.
