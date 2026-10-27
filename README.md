@@ -6,7 +6,7 @@
 > I forked it because this is by far the best minimap mod I've ever used, but 
 > the original is no longer listed on Thunderstore. With the help of LLM (which 
 > is also the reason for the "AI Generated" tag) I was finally able to upload 
-> this masterpiece to Thunderstore. I hope you guys like it too!
+> this masterpiece to Thunderstore. I hope you like it too!
 >
 > All credit for the original mod goes to [Tyzeron](https://github.com/tyzeron). 
 > This fork is not affiliated with or endorsed by the original author.
